@@ -1,0 +1,82 @@
+﻿:root {
+      color-scheme: dark;
+      font-family: "Courier New", monospace;
+      background: #080a23;
+      color: #e7e7ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background:
+        radial-gradient(ellipse at 50% 40%, #24205a 0, #111238 42%, #080a23 78%);
+    }
+    .cabinet { width: min(100%, 900px); }
+    header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+    .title {
+      margin: 0;
+      color: #f9db4a;
+      font-size: clamp(22px, 5vw, 36px);
+      letter-spacing: 3px;
+      text-shadow: 3px 3px #d13d9b;
+    }
+    .subtitle { margin: 6px 0 0; color: #92ecff; font-size: 12px; }
+    .status { color: #a7ff82; font-size: 12px; text-align: right; }
+    .screen {
+      position: relative;
+      overflow: hidden;
+      border: 4px solid #6b63c7;
+      border-radius: 6px;
+      background: #101033;
+      box-shadow: 0 0 0 4px #28265a, 0 18px 60px #0009, 0 0 35px #6b63c755;
+    }
+    canvas { display: block; width: 100%; height: auto; image-rendering: pixelated; }
+    .scanlines {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: .14;
+      background: repeating-linear-gradient(0deg, #000 0 1px, transparent 1px 4px);
+    }
+    .help {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 4px 0;
+      color: #b7b7da;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+    .keys { color: #f9db4a; }
+    select {
+      border: 1px solid #8a83f0;
+      border-radius: 3px;
+      padding: 8px;
+      background: #28265a;
+      color: white;
+      font: inherit;
+    }
+    button {
+      border: 1px solid #8a83f0;
+      border-radius: 3px;
+      padding: 8px 12px;
+      background: #28265a;
+      color: white;
+      font: inherit;
+      cursor: pointer;
+    }
+    button:hover { background: #403c88; }
+    @media (max-width: 600px) {
+      body { padding: 12px; }
+      .help { flex-direction: column; gap: 8px; }
+      header { align-items: center; }
+    }

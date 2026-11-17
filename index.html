@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lode Runner — ZX Spectrum</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="cabinet">
+    <header>
+      <div>
+        <h1 class="title">LODE RUNNER</h1>
+        <p class="subtitle">ZX SPECTRUM STYLE · HD BAREVNÝ PIXEL-ART</p>
+      </div>
+      <div class="status" id="status">PŘIPRAVEN</div>
+    </header>
+    <div class="screen">
+      <canvas id="game" width="1152" height="720" aria-label="Hra Lode Runner"></canvas>
+      <div class="scanlines"></div>
+    </div>
+    <div class="help">
+      <div>
+        <span class="keys">← →</span> pohyb &nbsp; <span class="keys">↑ ↓</span> žebřík<br>
+        <span class="keys">Z / Y</span> díra vlevo &nbsp; <span class="keys">X</span> díra vpravo
+      </div>
+      <div>
+        Posbírej zlato, pak vylez po žlutém žebříku až nahoru pro další mapu.<br>
+        Nepřátelé tě pronásledují — chyť je do děr!<br>
+        Mapa:
+        <select id="map-select" aria-label="Vybrat mapu">
+          <option value="0">1 · Starý důl</option>
+          <option value="1">2 · Dvojitá šachta</option>
+          <option value="2">3 · Barevné patro</option>
+        </select>
+        <button id="restart">Nová hra</button>
+        <button id="pause">Pauza</button>
+        <button id="sound" type="button" aria-pressed="true">Zvuk: zapnutý</button>
+      </div>
+    </div>
+  </main>
+  <script src="levels.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
+
